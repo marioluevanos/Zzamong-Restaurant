@@ -1,0 +1,44 @@
+{
+                "id": "location",
+                "title": "Location",
+                "address":{
+                    "state":"CA",
+                    "zip":90004,
+                    "street":"4255 W. 3rd Street",
+                    "city":"Los Angeles"
+                },
+                "hours":[{
+                    "day":"Mon",
+                    "hours": {
+                        "from":"11:00am",
+                        "to":"11:00am"
+                    }
+                }, {
+                    "hours": {
+                    "from": "11:00am",
+                        "to": "3:00am"
+                    },
+                    "day": "Tue"},
+                        {"hours":{
+                        "from": "11:00am",
+                    "to": "3:00am"},
+                    "day": "Wed"},
+                    {"hours":{
+                    "from": "11:00am",
+                    "to": "3:00am"},
+                    "day": "Thu"},
+                    {"hours":{
+                    "to": "3:00am",
+                    "from": "11:00am"},
+                    "day": "Fri"},
+                    {"hours":{
+                    "from": "11:00am",
+                    "to": "3:00am"},
+                    "day": "Sat"},
+                    {"hours":{
+                    "from": "11:00am",
+                    "to": "3:00am"},
+                    "day": "Sun"}],
+                    "order":3,
+                    "phone":2137392747}
+            }

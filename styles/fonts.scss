@@ -1,0 +1,12 @@
+$dir: '/fonts/';
+@font-face {
+    font-family: 'AzukiOT';
+    src: url($dir + '2506DE_1_0.eot');
+    src: url($dir + '2506DE_1_0.eot?#iefix') format('embedded-opentype'),
+        url($dir + '2506DE_1_0.woff') format('woff'),
+        url($dir + '2506DE_1_0.ttf') format('truetype'),
+        url($dir + '2506DE_1_0.svg#wf') format('svg'),
+        url($dir + '/2506DE_1_0.svgz#wf') format('svg');
+}
+
+@import url("https://use.typekit.net/ucz1eud.css");

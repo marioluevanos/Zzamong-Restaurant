@@ -1,0 +1,154 @@
+@import 'mixins';
+@import 'vars';
+
+:root {
+	
+  --gutter: 135;
+  --dw: 1440;
+	--dh: 900;
+	
+	@include bp(tablet) {
+		--gutter: 100;
+		--dw: 1280;
+		--dh: 800;
+	}
+	@include bp(mobile) {
+		--gutter: 30;
+		--dw: 375;
+    --dh: 812;
+	}
+}
+
+body {
+  background: $color-midwhite;
+  color: $color-brown;
+  font-family: $font-regular;
+  @include base-font(medium);
+  overflow-x: hidden;
+  
+  ::selection {
+    color: white;
+    background: rgba($color-primary, 0.5);
+  }
+
+  ::-moz-selection {
+    background: rgba($color-primary, 0.5);
+  }
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+  font-family: $font-regular;
+  margin: 0;
+
+  strong {
+    font-weight: 700;
+  }
+
+  .nuxt-link-exact-active.nuxt-link-active {
+    cursor: default;
+    color: inherit;
+  }
+}
+
+h1 {
+    @include base-font(h1);
+}
+
+h2 {
+  @include base-font(h2);
+  margin-bottom: vw(15);
+  line-height: 1;
+}
+
+h3 {
+  @include base-font(h3);
+  line-height: 1;
+}
+
+h4 {
+  @include base-font(large);
+  line-height: 1.1;
+}
+
+h5 {
+  @include base-font();
+  line-height: 1.3;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex-row {
+    display: flex;
+}
+
+a.link {
+    font-family: inherit;
+    text-decoration: none;
+    display: inline;
+    background-image: 
+        linear-gradient(to bottom, transparent 0%, #{rgba($color-primary, 0)} 50%),
+        linear-gradient(to bottom, transparent 50%, #{rgba($color-primary, 1)} 50%);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 50%, 0% 6px;
+    cursor: pointer;
+    transition: 
+        color 0.15s ease-in 0s,
+        background-size 0.3s ease-in 0s;
+    &:hover,
+    &:focus {
+        background-size: 100% 50%, 100% 6px;
+        transition: 
+            color 0.15s ease-out 0s,
+            background-size 0.2s ease-out 0s;
+    }
+}
+
+@keyframes zcolor-change {
+    0% {
+        fill: lighten($color-brown, 5%);
+    }
+    33% {
+        fill: lighten($color-brown, 35%);
+    }
+    66% {
+        fill: $color-gold;
+    }
+    100% {
+        fill: lighten($color-brown, 5%);
+    }
+}
+
+@keyframes zcolor-change-2 {
+    0% {
+        fill: lighten($color-primary, 5%);
+    }
+    33% {
+        fill: lighten($color-white, 35%);
+    }
+    66% {
+        fill: lighten($color-gold, 0%);
+    }
+    100% {
+        fill: lighten($color-offwhite, 5%);
+    }
+}
