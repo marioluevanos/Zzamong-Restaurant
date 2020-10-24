@@ -1,0 +1,27 @@
+{
+  "name": "zzamong-restaurant",
+  "version": "1.0.0",
+  "description": "My funkadelic Nuxt.js project",
+  "author": "Mario Luevanos",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "firebase deploy --only hosting:zzamong"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "gsap": "^2.1.3",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.18.9",
+    "prettier": "^1.16.4",
+    "sass-loader": "^7.1.0"
+  }
+}
