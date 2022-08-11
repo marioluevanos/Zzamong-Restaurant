@@ -8,7 +8,7 @@
 <script>
 import AppNavigation from '@/components/AppNavigation.vue'
 export default {
-  name: 'default',
+  name: 'layout-default',
   components: {
     AppNavigation
   }

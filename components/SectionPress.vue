@@ -506,7 +506,7 @@ section.press {
 }
 
 .press-title {
-  color: $color-brown;
+  color: currentColor;
   position: relative;
   z-index: 1;
   text-align: center;
@@ -612,7 +612,7 @@ li.link {
 
 .source {
   position: relative;
-  color: $color-brown;
+  color: currentColor;
   @include bp(tablet) {
     color: rgba($color-primary, 30%);
   }

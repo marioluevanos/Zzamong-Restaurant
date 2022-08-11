@@ -2,55 +2,59 @@ import ParallaxElement from '@/components/ParallaxElement'
 import { TweenMax } from 'gsap'
 
 export default {
-    name: 'zzamong-cloud',
-    components: {
-        ParallaxElement
+  name: 'zzamong-cloud',
+  components: {
+    ParallaxElement
+  },
+  props: {
+    factor: {
+      type: Number,
+      default: 0
     },
-    props: {
-        factor: {
-            type: Number,
-            default: 0
-        },
-        colorFront: {
-            type: String,
-            default: '#EEE7D6'
-        },
-        colorBack: {
-            type: String,
-            default: '#FEFBF1'
-        },
-        movement: {
-            type: Number,
-            default: -100
-        }
+    colorFront: {
+      type: String,
+      default: '#EEE7D6'
     },
-    methods: {
-        onMouseMove (event) {
-            this.mouseParallax(event, this.$refs.svg, this.movement)
-        },
-        /**
-         * @param {Object} event - Event object
-         * @param {HTMLElement} target
-         * @param {Number} movement
-         * @param {Boolean} x - If "x" movement should be applied
-         * @param {Boolean} y - If "y" movement should be applied
-         */
-        mouseParallax (event, target, movement, x = true, y = true) {
-            const _x = event.clientX
-            const _y = event.clientY
-            if(target) {
-                const xMove = x ? (_x - window.innerWidth / 2) / window.innerWidth * movement : 0
-                const yMove = y ? (_y - window.innerHeight / 2) / window.innerHeight * movement : 0
-                TweenMax.to(target, 0.6, {
-                    x: xMove,
-                    y: yMove,
-                    ease: Sine.easeOut
-                })
-            }
-        },
+    colorBack: {
+      type: String,
+      default: '#FEFBF1'
     },
-    render (h) {
-        const f = `M436.9,92.6c-21.7-15.5-43.8-18.9-60-15.5c-9.5,2.1-19.6,8.2-22.1,22.2c-1,5.5,0.5,10.2,3.8,13.6
+    movement: {
+      type: Number,
+      default: -100
+    }
+  },
+  methods: {
+    onMouseMove(event) {
+      this.mouseParallax(event, this.$refs.svg, this.movement)
+    },
+    /**
+     * @param {Object} event - Event object
+     * @param {HTMLElement} target
+     * @param {Number} movement
+     * @param {Boolean} x - If "x" movement should be applied
+     * @param {Boolean} y - If "y" movement should be applied
+     */
+    mouseParallax(event, target, movement, x = true, y = true) {
+      const _x = event.clientX
+      const _y = event.clientY
+      if (target) {
+        const xMove = x
+          ? ((_x - window.innerWidth / 2) / window.innerWidth) * movement
+          : 0
+        const yMove = y
+          ? ((_y - window.innerHeight / 2) / window.innerHeight) * movement
+          : 0
+        TweenMax.to(target, 0.6, {
+          x: xMove,
+          y: yMove,
+          ease: Sine.easeOut
+        })
+      }
+    }
+  },
+  render(h) {
+    const f = `M436.9,92.6c-21.7-15.5-43.8-18.9-60-15.5c-9.5,2.1-19.6,8.2-22.1,22.2c-1,5.5,0.5,10.2,3.8,13.6
         c3.7,3.7,9.9,4.8,13.3,3c4.9-2.6,5.8-0.2,3.5,1.3c-7.1,4.8-16.4,4-22.2-2.7c-5.1-5.8-7.4-12.6-6.8-21.4c1-14.9,11.6-26.8,25.2-30.9
         c-7.4-19.9-26.7-33.8-49.1-33.5c-1.1,0-2.3,0.1-3.4,0.2c5.3,14,2,30.6-10.1,40.6c-6.8,5.7-13.8,7.8-21.7,7.1
         c-8.9-0.8-15.1-8.1-15.4-16.8c-0.1-2.8,2.4-3.5,3.2,2.1c0.5,3.9,5.1,8.4,10.4,9.2c4.7,0.8,9.5-0.8,13.5-4.9
@@ -64,7 +68,7 @@ export default {
         c-27.2,4.1-30.9,31.9-28.7,44.1c1.4,8.2,3.6,15.5,7.9,22.4c9.5,13.4,25.2,22,42.8,21.7c20-0.4,37-12.1,45.3-28.9
         c9.5,11.5,24,18.7,40.1,18.4c21-0.4,38.7-13.4,46.2-31.6c6.2-0.3,13.4,0.5,21.7,3.3c15,5,89.6,20.6,109.8-38.7
         C511.8,138.8,460.6,109.5,436.9,92.6`
-        const b = `M262.3,0c-0.4,0-0.7,0-1.1,0l0,0c-19.8,0.3-37.9,10.4-48.8,26.3l0,0c-6.5-1.6-13.1-2.4-19.9-2.4l0,0
+    const b = `M262.3,0c-0.4,0-0.7,0-1.1,0l0,0c-19.8,0.3-37.9,10.4-48.8,26.3l0,0c-6.5-1.6-13.1-2.4-19.9-2.4l0,0
         c-0.5,0-1,0-1.5,0l0,0c-22.2,0.4-42.9,9.5-58.2,25.5l0,0c-1.4,1.5-2.4,3.3-3,5.2l0,0c-2.4-0.3-4.8-0.4-7.2-0.4l0,0
         c-0.4,0-0.7,0-1.1,0l0,0c-20.7,0.4-39.3,11-50.2,28.5l0,0c-3.9,4.2-7.3,6.4-13.8,6.7l0,0c-0.2,0-0.3,0-0.5,0l0,0
         c-7.4,0-24.8-4-31.7-16.5l0,0c-2.3-4.2-6.7-6.7-11.3-6.7l0,0c-1,0-2.1,0.1-3.1,0.4l0,0C5.2,68,1.2,73,1,78.8l0,0c0,0.4,0,0.8,0,1.2
@@ -76,27 +80,33 @@ export default {
         c-2.1-1.2-4.4-1.8-6.7-1.8l0,0c-3.5,0-7,1.4-9.5,4.1l0,0c-5.2,5.5-12,8.2-20.8,8.2l0,0c-16.6,0-40.5-10-64.2-26.9l0,0
         c-22.1-15.7-42.4-19-55.6-19l0,0c-1.4,0-2.8,0-4.2,0.1l0,0c0.1-1.8-0.2-3.6-0.8-5.3l0,0c-9.3-24.9-33.5-41.7-60.2-41.7l0,0
         c-0.4,0-0.8,0-1.2,0l0,0c-1.3,0-2.7,0.1-4.3,0.2l0,0c-3.1,0.3-5.9,1.6-8.1,3.7l0,0C298,8.3,280.9,0,262.3,0z`
-        const front = h('path', {
-            class: 'front',
-            style: { fill: this.colorFront },
-            attrs: { d: f }
-        })
-        const back = h('path', {
-            class: 'back',
-            style: { fill: this.colorBack },
-            attrs: { d: b }
-        })
+    const front = h('path', {
+      class: 'front',
+      style: { fill: this.colorFront },
+      attrs: { d: f }
+    })
+    const back = h('path', {
+      class: 'back',
+      style: { fill: this.colorBack },
+      attrs: { d: b }
+    })
 
-        const svg = h('svg', {
-            style: { width: '100%', height: 'auto' },
-            attrs: { viewBox: '0 0 551 202' },
-            ref: 'svg'
-        }, [back, front])
+    const svg = h(
+      'svg',
+      {
+        style: { width: '100%', height: 'auto' },
+        attrs: { viewBox: '0 0 551 202' },
+        ref: 'svg'
+      },
+      [back, front]
+    )
 
-        const { factor } = this
-        return h(ParallaxElement, { class: 'zzamong-cloud', props: { factor } }, [svg])
-    },
-    mounted () {
-        document.addEventListener('mousemove', this.onMouseMove, false)
-    }
+    const { factor } = this
+    return h(ParallaxElement, { class: 'zzamong-cloud', props: { factor } }, [
+      svg
+    ])
+  },
+  mounted() {
+    document.addEventListener('mousemove', this.onMouseMove, false)
+  }
 }

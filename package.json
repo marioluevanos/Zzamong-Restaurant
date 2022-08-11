@@ -12,7 +12,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "firebase deploy --only hosting:zzamong"
+    "deploy": "npm run generate && firebase deploy --only hosting:zzamong"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",

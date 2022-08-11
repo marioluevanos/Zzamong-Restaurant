@@ -1,37 +1,38 @@
 <template>
-  <main class="error">
-    <div class="message">
-      <h1>{{ error.message }}</h1>
-      <p>{{ error.statusCode }}</p>
-    </div>
-  </main>
+  <LayoutHome />
 </template>
-
 <script>
+import LayoutHome from '@/components/LayoutHome.vue'
+
 export default {
   name: 'layout-error',
   props: {
     error: Object
+  },
+  components: {
+    LayoutHome
+  },
+  mounted() {
+    document.body.classList.add('page-error')
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../styles/vars';
 @import '../styles/mixins';
 
-main.error {
-  background: $color-gold;
-  position: relative;
-  display: flex;
-  padding: vw(240) vw(120);
-  align-content: center;
-  justify-content: space-evenly;
-  flex-direction: column;
-  text-align: center;
-}
+.page-error {
+  color: darken($color-red, 15%);
 
-p {
-  margin-top: vw(30);
+  .app-navigation a.app-link[data-id='menu'],
+  .app-button.hero-cta-btn.primary {
+    display: none;
+  }
+
+  img.parallax-element {
+    transform: none !important;
+    clip-path: none !important;
+  }
 }
 </style>

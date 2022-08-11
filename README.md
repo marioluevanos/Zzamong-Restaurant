@@ -4,19 +4,23 @@
 
 ## Build Setup
 
-``` bash
-# install dependencies
+- Works with Node 14.15.0
+
+```bash
+# Switch Node version
+nvm use 14.15.0
+
+# Install dependencies
 $ npm run install
 
-# serve with hot reload at localhost:3000
+# Serve with hot reload at localhost:6969
 $ npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
+# Generate static files
 $ npm run generate
+
+# Deploy to firebase as static assets
+$ npm run deploy
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

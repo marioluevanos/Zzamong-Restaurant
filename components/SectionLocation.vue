@@ -1,31 +1,60 @@
-<template>    
-    <ParallaxContainer tag='section' class='location' data-id='location'>
-        <div class='bg'>
-            <figure class='bg-pattern'/>
-        </div>
-        <ParallaxElement :factor='-0.35' tag='header' class='location-header'>
-            <h3 ref='title' class='location-title'>{{location.title}}</h3>
-            <address>
-                <p><MapLink :address='location.address'>
-                    <span ref='address1'>{{location.address.street}}</span>
-                    <span ref='address2'>{{location.address.city}} {{location.address.zip}}</span></MapLink></p>
-            </address>
-        </ParallaxElement>
-        <svg viewBox="0 0 583 609" class='map'>
-            <g id='map' ref='map'>
-                <path id="road-western_1_" class="street" d="M110.8,598.3c-30.4,58,286.3-555.7,286.3-555.7s5-15.4,13-13.4
-                c8,2,157.2,44.1,157.2,44.1s5.2-0.1,10.7-0.2"/>
-                <path id="road-3rd-street_1_" class="street" d="M7.1,70.9c27.5,23.9,88.5,75.7,116,89.4c48,23.9,260.9,135.9,260.9,135.9
-                s10.2,4.4,16.9,11.8c6.7,7.4,30.7,46.2,30.7,46.2s3.8,12.7,11.9,21.8c8.1,9,45.3,63,45.3,63"/>
-                <path id="fwy-101_2_" class="fwy" d="M319.5,5.1c5.9,8,12.3,14.5,19.4,18.2c18.6,9.6,5.9,36.1,15.3,60.5
+<template>
+  <ParallaxContainer tag="section" class="location" data-id="location">
+    <div class="bg">
+      <figure class="bg-pattern" />
+    </div>
+    <ParallaxElement :factor="-0.35" tag="header" class="location-header">
+      <h3 ref="title" class="location-title">{{ location.title }}</h3>
+      <address>
+        <p>
+          <MapLink :address="location.address">
+            <span ref="address1">{{ location.address.street }}</span>
+            <span ref="address2"
+              >{{ location.address.city }} {{ location.address.zip }}</span
+            ></MapLink
+          >
+        </p>
+      </address>
+    </ParallaxElement>
+    <svg viewBox="0 0 583 609" class="map">
+      <g id="map" ref="map">
+        <path
+          id="road-western_1_"
+          class="street"
+          d="M110.8,598.3c-30.4,58,286.3-555.7,286.3-555.7s5-15.4,13-13.4
+                c8,2,157.2,44.1,157.2,44.1s5.2-0.1,10.7-0.2"
+        />
+        <path
+          id="road-3rd-street_1_"
+          class="street"
+          d="M7.1,70.9c27.5,23.9,88.5,75.7,116,89.4c48,23.9,260.9,135.9,260.9,135.9
+                s10.2,4.4,16.9,11.8c6.7,7.4,30.7,46.2,30.7,46.2s3.8,12.7,11.9,21.8c8.1,9,45.3,63,45.3,63"
+        />
+        <path
+          id="fwy-101_2_"
+          class="fwy"
+          d="M319.5,5.1c5.9,8,12.3,14.5,19.4,18.2c18.6,9.6,5.9,36.1,15.3,60.5
                 c9.4,24.5,11.7,53.7,11.9,67.1s15.6,49.5,29.9,65.9c14.3,16.4,63.6,64.8,80.8,90c17.2,25.2,60.3,82.2,67.7,106.5
-                c6,19.4,11,60.8,31.6,88.1"/>
-                <path id="fwy-10_2_" class="fwy" d="M10.4,346.1l156.8,66l121.1,63.3c0,0,76,25.8,92.4,62.5c6.9,15.3,20.9,40.2,35,63.9"/>
-                <path id="fwy-110_2_" class="fwy" d="M281.5,601.3c0,0,39.5-21.2,55.2-54.5c15.7-33.2,41.6-74.1,83.6-75.2s106.3-36.6,120.4-36.8
-                c7.2-0.1,21.2-1.2,35.3-2.2"/>
-            </g>
-            <g id='street-names' ref='streetNames'>
-                <path id="W3RDSTREET" transform="translate(2.5, -2.5)" class="street-name" d="M141,160.3c-0.3,0.2-0.6,0.2-0.9,0c-0.3-0.2-0.5-0.3-0.5-0.7c0-0.6,0.5-4,0.8-6.5
+                c6,19.4,11,60.8,31.6,88.1"
+        />
+        <path
+          id="fwy-10_2_"
+          class="fwy"
+          d="M10.4,346.1l156.8,66l121.1,63.3c0,0,76,25.8,92.4,62.5c6.9,15.3,20.9,40.2,35,63.9"
+        />
+        <path
+          id="fwy-110_2_"
+          class="fwy"
+          d="M281.5,601.3c0,0,39.5-21.2,55.2-54.5c15.7-33.2,41.6-74.1,83.6-75.2s106.3-36.6,120.4-36.8
+                c7.2-0.1,21.2-1.2,35.3-2.2"
+        />
+      </g>
+      <g id="street-names" ref="streetNames">
+        <path
+          id="W3RDSTREET"
+          transform="translate(2.5, -2.5)"
+          class="street-name"
+          d="M141,160.3c-0.3,0.2-0.6,0.2-0.9,0c-0.3-0.2-0.5-0.3-0.5-0.7c0-0.6,0.5-4,0.8-6.5
                 c0-0.1,0-0.1,0-0.2c0,0-0.1,0-0.2,0.1c-1.9,1.7-4.4,4-4.9,4.3c-0.3,0.2-0.6,0.1-0.9,0s-0.5-0.3-0.5-0.7c0-0.6,0.6-5.3,0.9-8.2
                 c0.1-1,0.2-1.8,0.2-2.3c0,0,0-0.2,0-0.3c0.1-0.1,0.1-0.1,0.3-0.1l1.7,0.9c0.1,0.1,0.2,0.2,0.1,0.4c-0.4,1.5-0.8,4.2-1.2,7.1
                 c0,0.2,0,0.3,0,0.3c0.1,0,0.2,0,0.3-0.1c2-1.9,3.7-3.5,4.9-4.6c0.1-0.1,0.2-0.1,0.4-0.1l0.7,0.4c0.2,0.1,0.2,0.3,0.2,0.4
@@ -73,8 +102,12 @@
                 c0.8-1.4,1.2-2.3,1.6-3.1c0.1-0.2,0-0.3-0.2-0.4l-1.1-0.6c-1-0.5-1.7-0.3-1.9-0.4c-0.1-0.1-0.2-0.2-0.1-0.3
                 c0.2-0.3,0.7-0.8,1.1-1.2c0.1-0.1,0.2-0.2,0.3-0.1c0.3,0.2,0.3,0.3,1.6,0.9l4,2.1c1.3,0.7,1.3,0.6,1.6,0.8c0.1,0.1,0.1,0.2,0.1,0.3
                 c-0.2,0.6-0.3,1.3-0.4,1.6c-0.1,0.1-0.2,0.1-0.3,0.1c-0.2-0.1-0.4-0.8-1.4-1.3l-1.1-0.6c-0.2-0.1-0.3-0.1-0.4,0.1
-                C244.3,206.6,243.9,207.5,243.1,208.9z"/>
-                <path id="WESTERN" class="street-name" d="M216.8,361.7c0.2,0.3,0.2,0.6,0,0.9c-0.2,0.3-0.3,0.5-0.7,0.5c-0.6,0-4-0.5-6.5-0.8
+                C244.3,206.6,243.9,207.5,243.1,208.9z"
+        />
+        <path
+          id="WESTERN"
+          class="street-name"
+          d="M216.8,361.7c0.2,0.3,0.2,0.6,0,0.9c-0.2,0.3-0.3,0.5-0.7,0.5c-0.6,0-4-0.5-6.5-0.8
                 c-0.1,0-0.1,0-0.2,0s0,0.1,0.1,0.2c1.7,1.9,4,4.4,4.3,4.9c0.2,0.3,0.1,0.6,0,0.9c-0.2,0.3-0.3,0.5-0.7,0.5c-0.6,0-5.3-0.6-8.2-0.9
                 c-1-0.1-1.8-0.2-2.3-0.2c0,0-0.2,0-0.3,0c-0.1-0.1-0.1-0.1-0.1-0.3l0.9-1.7c0.1-0.1,0.2-0.2,0.4-0.1c1.5,0.4,4.2,0.8,7.1,1.2
                 c0.2,0,0.3,0,0.3,0c0-0.1,0-0.2-0.1-0.3c-1.9-2-3.5-3.7-4.6-4.9c-0.1-0.1-0.1-0.2-0.1-0.4l0.4-0.7c0.1-0.2,0.3-0.2,0.4-0.2
@@ -109,49 +142,92 @@
                 c0.2,0.1,0.3,0.2,0.2,0.4l-0.4,0.8c-0.1,0.2-0.2,0.2-0.4,0.3c-1.3,0.3-7.3,1.4-9,1.7c-0.1,0-0.3,0-0.3,0.1c0,0.1,0,0.1,0.1,0.2
                 c0,0,0.8,0.5,1.7,1c2.4,1.3,4.2,2,4.4,2.1c0.2,0.1,0.2,0.3,0.1,0.5l-0.6,1.2c-0.1,0.2-0.3,0.3-0.5,0.2c-0.2-0.1-1.9-1.2-4.3-2.5
                 c-2.4-1.3-4.1-2-4.3-2.1c-0.2-0.1-0.2-0.3-0.1-0.5l0.6-1.2c0.1-0.2,0.3-0.4,0.7-0.5c1.7-0.3,5.5-1,8.3-1.5c0.1,0,0.2,0,0.2-0.1
-                c0,0,0-0.1-0.1-0.1L245.5,296.9z"/>
-            </g>
-            <g ref='fwySigns'>
-                <g id="f-101" transform="translate(412, 238)">
-                    <path id="Fill-1" class="fwy-sign-bg" d="M37.9,13.5c0-2.4,1.2-4.6,3-5.9L33.4,0c-1.9,1.3-4.2,2.1-6.7,2.1S21.9,1.3,20,0
+                c0,0,0-0.1-0.1-0.1L245.5,296.9z"
+        />
+      </g>
+      <g ref="fwySigns">
+        <g id="f-101" transform="translate(412, 238)">
+          <path
+            id="Fill-1"
+            class="fwy-sign-bg"
+            d="M37.9,13.5c0-2.4,1.2-4.6,3-5.9L33.4,0c-1.9,1.3-4.2,2.1-6.7,2.1S21.9,1.3,20,0
                         c-1.9,1.3-4.2,2.1-6.7,2.1S8.4,1.3,6.5,0L-1,7.6c1.8,1.3,3,3.5,3,5.9c0,1.5-0.5,3-1.3,4.2C-0.4,19.2-1,21.1-1,23.2
                         c0,5.4,4.4,9.8,9.8,9.8h2.9c3.1,0,6,1.1,8.2,2.9c2.2-1.8,5.1-2.9,8.2-2.9h2.9c5.4,0,9.8-4.4,9.8-9.8c0-2.1-0.6-4-1.7-5.5
-                        C38.4,16.5,37.9,15,37.9,13.5"/>
-                    <path class="fwy-letters" d="M6.9,13.4c0-0.3,0.6-0.3,1.6-1.2c0.8-0.7,0.8-1.5,1.3-1.5c0.4,0,1,0.3,1.3,0.4c0.3,0.1,0.4,0.3,0.4,0.7
+                        C38.4,16.5,37.9,15,37.9,13.5"
+          />
+          <path
+            class="fwy-letters"
+            d="M6.9,13.4c0-0.3,0.6-0.3,1.6-1.2c0.8-0.7,0.8-1.5,1.3-1.5c0.4,0,1,0.3,1.3,0.4c0.3,0.1,0.4,0.3,0.4,0.7
                         c0,0.3-0.2,2.3-0.2,5.7s0.2,5.8,0.2,6.2c0,0.3-0.2,0.5-0.5,0.5H9.4c-0.3,0-0.5-0.1-0.5-0.5c0-0.3,0.2-2.8,0.2-6.2
-                        C9.1,16,9,15,9,14.1C9,14,9,14,8.9,14c-0.1,0-0.6,0.6-1,0.6C7.6,14.6,6.9,13.8,6.9,13.4z"/>
-                    <path class="fwy-letters" d="M20.2,10.7c3.4,0,6.3,2.8,6.3,6.8c0,3.9-2.8,6.8-6.3,6.8S14,21.4,14,17.5C14,13.5,16.8,10.7,20.2,10.7z
-                        M20.2,22.2c2.4,0,4.1-2.1,4.1-4.8c0-2.7-1.6-4.7-4.1-4.7c-2.4,0-4.1,2-4.1,4.7C16.2,20.2,17.8,22.2,20.2,22.2z"/>
-                    <path class="fwy-letters" d="M27.4,13.4c0-0.3,0.6-0.3,1.6-1.2c0.8-0.7,0.8-1.5,1.3-1.5c0.4,0,1,0.3,1.3,0.4c0.3,0.1,0.4,0.3,0.4,0.7
+                        C9.1,16,9,15,9,14.1C9,14,9,14,8.9,14c-0.1,0-0.6,0.6-1,0.6C7.6,14.6,6.9,13.8,6.9,13.4z"
+          />
+          <path
+            class="fwy-letters"
+            d="M20.2,10.7c3.4,0,6.3,2.8,6.3,6.8c0,3.9-2.8,6.8-6.3,6.8S14,21.4,14,17.5C14,13.5,16.8,10.7,20.2,10.7z
+                        M20.2,22.2c2.4,0,4.1-2.1,4.1-4.8c0-2.7-1.6-4.7-4.1-4.7c-2.4,0-4.1,2-4.1,4.7C16.2,20.2,17.8,22.2,20.2,22.2z"
+          />
+          <path
+            class="fwy-letters"
+            d="M27.4,13.4c0-0.3,0.6-0.3,1.6-1.2c0.8-0.7,0.8-1.5,1.3-1.5c0.4,0,1,0.3,1.3,0.4c0.3,0.1,0.4,0.3,0.4,0.7
                         c0,0.3-0.2,2.3-0.2,5.7s0.2,5.8,0.2,6.2c0,0.3-0.2,0.5-0.5,0.5h-1.7c-0.3,0-0.5-0.1-0.5-0.5c0-0.3,0.2-2.8,0.2-6.2
-                        c0-1.4-0.1-2.3-0.1-3.3c0-0.1,0-0.1-0.1-0.1c-0.1,0-0.6,0.6-1,0.6C28,14.6,27.4,13.8,27.4,13.4z"/>
-                </g>
-                <g id="f-10" transform="translate(59, 352)">
-                    <path class="fwy-sign-bg" d="M-1,16c0-2.4,0.3-4.7,0.9-6.8h40.2c0.6,2.2,0.9,4.5,0.9,6.8c0,12.8-9,23.5-21,26C8,39.4-1,28.8-1,16"/>
-                    <path id="Fill-4" class="fwy-sign-top" d="M0.1,8.2C1,5.3,2.4,2.5,4.2,0.1c2.5,0.7,5,1.1,7.7,1.1c2.8,0,5.5-0.4,8.1-1.2
-                        c2.6,0.8,5.3,1.2,8.1,1.2c2.7,0,5.3-0.4,7.7-1.1c1.8,2.4,3.2,5.1,4.1,8.1H0.1z"/>
-                    <path class="fwy-letters" d="M10.1,18.4c0-0.3,0.6-0.3,1.6-1.2c0.8-0.7,0.8-1.5,1.3-1.5c0.4,0,1,0.3,1.3,0.4c0.3,0.1,0.4,0.3,0.4,0.7
+                        c0-1.4-0.1-2.3-0.1-3.3c0-0.1,0-0.1-0.1-0.1c-0.1,0-0.6,0.6-1,0.6C28,14.6,27.4,13.8,27.4,13.4z"
+          />
+        </g>
+        <g id="f-10" transform="translate(59, 352)">
+          <path
+            class="fwy-sign-bg"
+            d="M-1,16c0-2.4,0.3-4.7,0.9-6.8h40.2c0.6,2.2,0.9,4.5,0.9,6.8c0,12.8-9,23.5-21,26C8,39.4-1,28.8-1,16"
+          />
+          <path
+            id="Fill-4"
+            class="fwy-sign-top"
+            d="M0.1,8.2C1,5.3,2.4,2.5,4.2,0.1c2.5,0.7,5,1.1,7.7,1.1c2.8,0,5.5-0.4,8.1-1.2
+                        c2.6,0.8,5.3,1.2,8.1,1.2c2.7,0,5.3-0.4,7.7-1.1c1.8,2.4,3.2,5.1,4.1,8.1H0.1z"
+          />
+          <path
+            class="fwy-letters"
+            d="M10.1,18.4c0-0.3,0.6-0.3,1.6-1.2c0.8-0.7,0.8-1.5,1.3-1.5c0.4,0,1,0.3,1.3,0.4c0.3,0.1,0.4,0.3,0.4,0.7
                         c0,0.3-0.2,2.3-0.2,5.7s0.2,5.8,0.2,6.2c0,0.3-0.2,0.5-0.5,0.5h-1.7c-0.3,0-0.5-0.1-0.5-0.5c0-0.3,0.2-2.8,0.2-6.2
-                        c0-1.4-0.1-2.3-0.1-3.3c0-0.1,0-0.1-0.1-0.1c-0.1,0-0.6,0.6-1,0.6C10.8,19.6,10.1,18.8,10.1,18.4z"/>
-                    <path class="fwy-letters" d="M23.5,15.7c3.4,0,6.3,2.8,6.3,6.8c0,3.9-2.8,6.8-6.3,6.8s-6.3-2.8-6.3-6.8C17.2,18.5,20,15.7,23.5,15.7z
-                        M23.5,27.2c2.4,0,4.1-2.1,4.1-4.8c0-2.7-1.6-4.7-4.1-4.7s-4.1,2-4.1,4.7C19.4,25.2,21,27.2,23.5,27.2z"/>
-                </g>
-                <g id="f-110" transform="translate(395, 452)">
-                    <path class="fwy-sign-bg" d="M-1,16c0-2.4,0.3-4.7,0.9-6.8h40.2c0.6,2.2,0.9,4.5,0.9,6.8c0,12.8-9,23.5-21,26C8,39.4-1,28.8-1,16"/>
-                    <path class="fwy-sign-top" d="M0.1,8.2C1,5.3,2.4,2.5,4.2,0.1c2.5,0.7,5,1.1,7.7,1.1c2.8,0,5.5-0.4,8.1-1.2c2.6,0.8,5.3,1.2,8.1,1.2
-                        c2.7,0,5.3-0.4,7.7-1.1c1.8,2.4,3.2,5.1,4.1,8.1H0.1z"/>
-                    <path class="fwy-letters" d="M6.7,18.4c0-0.3,0.6-0.3,1.6-1.2c0.8-0.7,0.8-1.5,1.3-1.5c0.4,0,1,0.3,1.3,0.4c0.3,0.1,0.4,0.3,0.4,0.7
+                        c0-1.4-0.1-2.3-0.1-3.3c0-0.1,0-0.1-0.1-0.1c-0.1,0-0.6,0.6-1,0.6C10.8,19.6,10.1,18.8,10.1,18.4z"
+          />
+          <path
+            class="fwy-letters"
+            d="M23.5,15.7c3.4,0,6.3,2.8,6.3,6.8c0,3.9-2.8,6.8-6.3,6.8s-6.3-2.8-6.3-6.8C17.2,18.5,20,15.7,23.5,15.7z
+                        M23.5,27.2c2.4,0,4.1-2.1,4.1-4.8c0-2.7-1.6-4.7-4.1-4.7s-4.1,2-4.1,4.7C19.4,25.2,21,27.2,23.5,27.2z"
+          />
+        </g>
+        <g id="f-110" transform="translate(395, 452)">
+          <path
+            class="fwy-sign-bg"
+            d="M-1,16c0-2.4,0.3-4.7,0.9-6.8h40.2c0.6,2.2,0.9,4.5,0.9,6.8c0,12.8-9,23.5-21,26C8,39.4-1,28.8-1,16"
+          />
+          <path
+            class="fwy-sign-top"
+            d="M0.1,8.2C1,5.3,2.4,2.5,4.2,0.1c2.5,0.7,5,1.1,7.7,1.1c2.8,0,5.5-0.4,8.1-1.2c2.6,0.8,5.3,1.2,8.1,1.2
+                        c2.7,0,5.3-0.4,7.7-1.1c1.8,2.4,3.2,5.1,4.1,8.1H0.1z"
+          />
+          <path
+            class="fwy-letters"
+            d="M6.7,18.4c0-0.3,0.6-0.3,1.6-1.2c0.8-0.7,0.8-1.5,1.3-1.5c0.4,0,1,0.3,1.3,0.4c0.3,0.1,0.4,0.3,0.4,0.7
                         c0,0.3-0.2,2.3-0.2,5.7s0.2,5.8,0.2,6.2c0,0.3-0.2,0.5-0.5,0.5H9.1c-0.3,0-0.5-0.1-0.5-0.5c0-0.3,0.2-2.8,0.2-6.2
-                        c0-1.4-0.1-2.3-0.1-3.3c0-0.1,0-0.1-0.1-0.1c-0.1,0-0.6,0.6-1,0.6C7.4,19.6,6.7,18.8,6.7,18.4z"/>
-                    <path class="fwy-letters" d="M13.6,18.4c0-0.3,0.6-0.3,1.6-1.2c0.8-0.7,0.8-1.5,1.3-1.5c0.4,0,1,0.3,1.3,0.4c0.3,0.1,0.4,0.3,0.4,0.7
+                        c0-1.4-0.1-2.3-0.1-3.3c0-0.1,0-0.1-0.1-0.1c-0.1,0-0.6,0.6-1,0.6C7.4,19.6,6.7,18.8,6.7,18.4z"
+          />
+          <path
+            class="fwy-letters"
+            d="M13.6,18.4c0-0.3,0.6-0.3,1.6-1.2c0.8-0.7,0.8-1.5,1.3-1.5c0.4,0,1,0.3,1.3,0.4c0.3,0.1,0.4,0.3,0.4,0.7
                         c0,0.3-0.2,2.3-0.2,5.7s0.2,5.8,0.2,6.2c0,0.3-0.2,0.5-0.5,0.5H16c-0.3,0-0.5-0.1-0.5-0.5c0-0.3,0.2-2.8,0.2-6.2
-                        c0-1.4-0.1-2.3-0.1-3.3c0-0.1,0-0.1-0.1-0.1c-0.1,0-0.6,0.6-1,0.6C14.2,19.6,13.6,18.8,13.6,18.4z"/>
-                    <path class="fwy-letters" d="M26.9,15.7c3.4,0,6.3,2.8,6.3,6.8c0,3.9-2.8,6.8-6.3,6.8s-6.3-2.8-6.3-6.8C20.6,18.5,23.5,15.7,26.9,15.7z
-                        M26.9,27.2c2.4,0,4.1-2.1,4.1-4.8c0-2.7-1.6-4.7-4.1-4.7c-2.4,0-4.1,2-4.1,4.7C22.8,25.2,24.5,27.2,26.9,27.2z"/>
-                </g>
-            </g>
-            <g id="map-pin" transform="translate(287, 113)" ref='mapPin'>
-                <path d="M99.3,82.7c0.4-0.4,1-1.3-0.4-1.3c-1.2,0-4,1.1-4.9,1.4C89.3,83.8,84.4,84,80,84c-1.3,0-2.5,0-3.7,0
+                        c0-1.4-0.1-2.3-0.1-3.3c0-0.1,0-0.1-0.1-0.1c-0.1,0-0.6,0.6-1,0.6C14.2,19.6,13.6,18.8,13.6,18.4z"
+          />
+          <path
+            class="fwy-letters"
+            d="M26.9,15.7c3.4,0,6.3,2.8,6.3,6.8c0,3.9-2.8,6.8-6.3,6.8s-6.3-2.8-6.3-6.8C20.6,18.5,23.5,15.7,26.9,15.7z
+                        M26.9,27.2c2.4,0,4.1-2.1,4.1-4.8c0-2.7-1.6-4.7-4.1-4.7c-2.4,0-4.1,2-4.1,4.7C22.8,25.2,24.5,27.2,26.9,27.2z"
+          />
+        </g>
+      </g>
+      <g id="map-pin" transform="translate(287, 113)" ref="mapPin">
+        <path
+          d="M99.3,82.7c0.4-0.4,1-1.3-0.4-1.3c-1.2,0-4,1.1-4.9,1.4C89.3,83.8,84.4,84,80,84c-1.3,0-2.5,0-3.7,0
                     c6.2-0.2,13.8-0.7,20-2.3c-5.5,0.9-10.8,1.1-15.8,1.1c-5.4,0-18.1-0.1-20.8-1.7c-0.1,0-0.2-0.1-0.4-0.1c-1.7,0-5.1,2.8-5.5,3.2
                     c-1.1,1.1-2.7,3.1,0,3.5c0.8,0.1,2.5,0.2,3.6,0.2c8.5,0,18.8-0.6,27.9-1.9c-3.4,1-6.9,2-10.5,3c-2.8,0.8-5.7,1.6-8.6,2.3
                     c-1.3,0-2.6,0-4,0c-2,0-4.1,0-6.1,0.1c-9.5,0.2-16.1,0.9-16.4,1c-5,0.5-7.1,1.5-7.5,3.4c-0.3-0.1-0.5-0.3-0.8-0.4
@@ -159,17 +235,26 @@
                     c-0.4,0.4-0.8,0.8-1.3,1.3c-10.2,9.8-19.9,18.8-19,19.4c0.2,0.1,0.5,0.2,1,0.2c0.4,0,0.9-0.1,1.4-0.2c2.1-0.6,9.7-9.6,19.9-19.4
                     c0.4-0.4,0.7-0.7,1.1-1c0.8,0,1.6,0.1,2.5,0.1c1,0,1.9,0,2.9,0c6.6,0,11.7-0.6,12.5-0.7c1.1-0.1,8.6-0.8,23.1-6.2
                     c0.5-0.2,1-0.6,1.2-1c5.3-2.1,7.3-4,7.2-6.5c-0.2-3.5-4.6-4.6-9.4-5.3c-1.1-0.2-2.2-0.3-3.4-0.4l-0.1-2.5
-                    C90.3,87.4,97.3,84.6,99.3,82.7z"/>
-                <path class="chop-stick" d="M23.7,56.2c-1.4,0-1.4,1.7-1.4,26c0,25.5-0.4,48.7,1,50.2c0.3,0.3,0.7,0.5,1.1,0.5
-                    c0.4,0,0.8-0.2,1.1-0.5c1.5-1.5-0.2-24.8-0.2-50.2C25.4,58,25.2,56.2,23.7,56.2"/>
-                <path class="bowl" d="M27.7,75c-1,0-2,0-3-0.1c-1.1-0.1-2.2-0.2-3.3-0.4C15,73.6,8.8,71.2,3.1,67.3
+                    C90.3,87.4,97.3,84.6,99.3,82.7z"
+        />
+        <path
+          class="chop-stick"
+          d="M23.7,56.2c-1.4,0-1.4,1.7-1.4,26c0,25.5-0.4,48.7,1,50.2c0.3,0.3,0.7,0.5,1.1,0.5
+                    c0.4,0,0.8-0.2,1.1-0.5c1.5-1.5-0.2-24.8-0.2-50.2C25.4,58,25.2,56.2,23.7,56.2"
+        />
+        <path
+          class="bowl"
+          d="M27.7,75c-1,0-2,0-3-0.1c-1.1-0.1-2.2-0.2-3.3-0.4C15,73.6,8.8,71.2,3.1,67.3
                     c-10-6.7-12.6-13.3-13-17.7c-0.5-4.9,1.6-8.1,1.7-8.3c0.2-0.3,0.5-0.5,0.9-0.6c0.1,0,0.1,0,0.2,0c0.3,0,0.6,0.1,0.9,0.3
                     c3,2.7,6.3,5,9.8,6.7c3.9,2,8.1,3.4,12.4,4.2c0,0,0.1,0,0.1,0c2.8,0.5,5.6,0.7,8.6,0.7c0.9,0,1.8,0,2.6-0.1
                     c1.8-0.1,3.5-0.3,5.2-0.5c-1.9,0.2-3.7,0.3-5.4,0.3c-12.2,0-19.6-4.5-24.4-7.5l-0.2-0.1C1,44-0.1,43.3-1.2,42.7
                     c-1.1-0.5-4.4-2.2-4.1-4.8c0.2-2.7,4-4,4.7-4.2c0.3-0.1,6.2-1.9,15.5-2.5c2-0.1,4.1-0.2,6.1-0.2c3.2,0,6.5,0.2,9.7,0.5
                     c5.7,0.6,11.3,1.8,16.7,3.6c6.6,2.2,10.4,5.4,11.4,9.6c0.8,3.6-0.6,7.3-2.6,10.5c0,0,0,0,0,0c0.5,0.4,0.7,1.1,0.3,1.7
-                    c-8.8,13.9-15.7,15.9-16.9,16.2C38.7,73.4,34.3,75,27.7,75"/>
-                <path class="bowl-outline" d="M21.5,29c-2.1,0-4.2,0.1-6.2,0.2c-9.5,0.6-15.7,2.5-15.9,2.6c-1.3,0.4-5.4,2-5.7,5.4
+                    c-8.8,13.9-15.7,15.9-16.9,16.2C38.7,73.4,34.3,75,27.7,75"
+        />
+        <path
+          class="bowl-outline"
+          d="M21.5,29c-2.1,0-4.2,0.1-6.2,0.2c-9.5,0.6-15.7,2.5-15.9,2.6c-1.3,0.4-5.4,2-5.7,5.4
                     c-0.1,0.6,0,1.2,0.2,1.7c-0.2-0.1-0.5-0.1-0.7-0.1c-0.1,0-0.2,0-0.4,0C-8,39-8.7,39.4-9.1,40c-0.1,0.1-8.8,14.2,11.8,28
                     c6,4,12.4,6.5,19,7.5c1.1,0.2,2.3,0.3,3.4,0.4c1,0.1,2,0.1,3,0.1c6.6,0,11.2-1.5,12.3-1.9c1.8-0.4,8.9-2.8,17.8-16.9
                     c0.5-0.8,0.5-1.7,0.1-2.5c1.9-3.3,3.2-7.1,2.3-10.8c-1.1-4.7-5.2-8.3-12.3-10.7c-5.5-1.8-11.2-3-17.1-3.7
@@ -178,29 +263,43 @@
                     c-1-0.1-2.1-0.2-3.2-0.4c-5.4-0.8-11.6-2.8-18-7.1c-18.7-12.5-11-24.4-11-24.4c3.3,2.9,6.7,5.2,10.1,7c4.2,2.2,8.6,3.6,12.9,4.3
                     l0,0h0c3,0.5,6,0.8,8.9,0.8c0.9,0,1.8,0,2.7-0.1h0c7.7-0.4,14.7-2.4,20.1-4.6c4.3-1.8,7.7-3.8,9.6-5.4C54.1,44.8,51,46,48,47v0
                     c-8.1,2.6-14.8,3.6-20.5,3.6c-11.7,0-18.8-4.3-23.9-7.4c-1.4-0.9-2.7-1.7-3.9-2.2c-8-4,0.4-6.7,0.4-6.7s6-1.9,15.3-2.5
-                    C17.3,31.7,19.3,31.6,21.5,31.6"/>
-                <path class="letter-z" d="M45.5,38c-0.2,0-0.4,0.1-0.4,0.3c-3.7,4.1-19.9,6.6-25.5,7.6c4-4.3,7.9-8.6,11.5-13.3
+                    C17.3,31.7,19.3,31.6,21.5,31.6"
+        />
+        <path
+          class="letter-z"
+          d="M45.5,38c-0.2,0-0.4,0.1-0.4,0.3c-3.7,4.1-19.9,6.6-25.5,7.6c4-4.3,7.9-8.6,11.5-13.3
                 c0,0,0.1-0.1,0.1-0.1c1.9-2.5,4.8-6.5,7.7-10.9c4.3-6.5,8.3-14,8.3-19c0-1-0.4-3.5-1.8-3.5c-1.3,0-2.9,2.8-3.4,3.7
                 c-3.5,2.8-8.3,3.2-12.7,3.2c-1.3,0-2.5,0-3.8-0.1C31.4,5.3,38.4,3.8,43-0.4c-4.6,2.3-9.7,2.9-14.7,2.9C22.9,2.5,10,2.2,5.6-1.8
                 C5.5-1.9,5.4-2,5.2-2C3.5-2,3,5.4,3,6.5c0,2.9,0.5,8.2,3.7,9.3c1,0.4,2.7,0.5,3.8,0.5c8.6,0,18.3-1.6,26-5.1
                 c-2.4,2.7-4.8,5.4-7.4,7.9c-4.4,4.4-9,8.7-13.5,13c-0.7,0.6-1.4,1.3-2.1,1.9c-2.7,2.6-5.7,5-8.3,7.6C4.4,42.3,4,43,3.7,43.5
-                c7.5,4.7,19.6,11.9,44.3,3.8v-0.1C48,46,47.4,38,45.5,38"/>
-            </g>
-        </svg>
-        <ParallaxElement class='hours' :factor='-0.2' ref='hours'>
-            <AppIcon type='corner' class='corner' :class='{[corner]: true}' v-for='corner in ["top", "right", "bottom", "left"]' :key='corner'/>
-            <h4 class='hours-title' ref='hoursTitle'>Hours</h4>
-            <ul class='hours-list' ref='hoursList'>
-                <li v-for='time in location.hours' :key='time.day' class='hours-this-day'>
-                    <span class='day'>{{time.day}}</span> <span class='time'>{{time.hours.from}} – {{time.hours.to}}</span>
-                </li>
-            </ul>
-        </ParallaxElement>
-    </ParallaxContainer>
+                c7.5,4.7,19.6,11.9,44.3,3.8v-0.1C48,46,47.4,38,45.5,38"
+        />
+      </g>
+    </svg>
+    <ParallaxElement class="hours" :factor="-0.2" ref="hours">
+      <AppIcon
+        type="corner"
+        class="corner"
+        :class="{ [corner]: true }"
+        v-for="corner in ['top', 'right', 'bottom', 'left']"
+        :key="corner"
+      />
+      <h4 class="hours-title" ref="hoursTitle">Hours</h4>
+      <ul class="hours-list" ref="hoursList">
+        <li
+          v-for="time in location.hours"
+          :key="time.day"
+          class="hours-this-day"
+        >
+          <span class="day">{{ time.day }}</span>
+          <span class="time">{{ time.hours.from }} – {{ time.hours.to }}</span>
+        </li>
+      </ul>
+    </ParallaxElement>
+  </ParallaxContainer>
 </template>
 
 <script>
-
 import AppIcon from '@/components/AppIcon.vue'
 import MapLink from '@/components/MapLink'
 import ParallaxContainer from '@/components/ParallaxContainer'
@@ -208,340 +307,407 @@ import ParallaxElement from '@/components/ParallaxElement'
 import scrollObserver from '@/mixins/scrollObserver'
 
 export default {
-    name: 'section-location',
-    components: {
-        AppIcon,
-        ParallaxContainer,
-        ParallaxElement,
-        MapLink
-    },
-    computed: {
-        location() {
-            return this.$store.getters.location
-        }
-    },
-    mixins: [scrollObserver],
-    methods: {
-        animateSection() {
-            const {$refs} = this
-            const { 
-                map, 
-                mapPin, 
-                streetNames, 
-                fwySigns,
-                hours, 
-                hoursTitle, 
-                hoursList
-            } = $refs
-
-            const title = new SplitText(this.$refs.title)
-            const address1 = new SplitText(this.$refs.address1).chars
-            const address2 = new SplitText(this.$refs.address2).chars
-            const address = [...address1, ...address2]
-
-            return new TimelineMax({ paused: true })
-
-            //title
-            .add('title', 0.5)
-            .staggerFromTo(title.chars, 2, {
-                x: 15,
-                autoAlpha: 0
-            }, {
-                x: 0,
-                autoAlpha: 1,
-                ease: Power3.easeOut
-            }, 0.025, 'title')
-            .staggerFromTo(address, 2, {
-                x: 15,
-                autoAlpha: 0
-            }, {
-                x: 0,
-                autoAlpha: 1,
-                ease: Power3.easeOut
-            }, 0.025, 'title')
-
-            //map
-            .add('map', 0)
-            .staggerFromTo(map.children, 10, {
-                drawSVG: '50% 50%',
-                ease: Expo.easeIn
-            }, {
-                drawSVG: '100%',
-                ease: Expo.easeOut
-            }, 0.1, 'map')
-            .staggerFromTo(streetNames.children, 1, {
-                autoAlpha: 0,
-                y: -15,
-            }, {
-                autoAlpha: 1,
-                y: 0,
-                ease: Sine.easeOut
-            }, 0.3, 'map+=1')
-            .staggerFromTo(fwySigns.children, 1, {
-                autoAlpha: 0,
-                scale: 1.5
-            }, {
-                autoAlpha: 1,
-                scale: 1,
-                transformOrigin: '50% 50%',
-                ease: Sine.easeOut
-            }, 0.3, 'map+=1.2')
-            .fromTo(mapPin, 0.3, {
-                opacity: 0,
-            }, {
-                opacity: 1,
-                ease: Sine.easeOut
-            }, 'map')
-            .fromTo(mapPin, 2.5, {
-                y: -window.innerHeight * 0.25,
-            }, {
-                x: 287, 
-                y: 113,
-                ease: Bounce.easeOut
-            }, 'map')
-
-            // Hours
-            .add('hours', 1.25)
-            .fromTo(hours.$el, 1, {
-                clipPath: '100% 0 0 0',
-                webkitClipPath: '100% 0 0 0'
-            }, {
-                clipPath: '0 0 0 0',
-                webkitClipPath: '0 0 0 0',
-                ease: Power3.easeOut
-            }, 'hours')
-            .fromTo(hoursTitle, 1, {
-                y: -15,
-                autoAlpha: 0
-            }, {
-                y: 0,
-                autoAlpha: 1,
-                ease: Power3.easeOut
-            }, 'hours+=0.5')
-            .staggerFromTo(hoursList.children, 1, {
-                y: -15,
-                autoAlpha: 0
-            }, {
-                y: 0,
-                autoAlpha: 1,
-                ease: Power3.easeOut
-            }, 0.05, 'hours+=0.6')
-        }
+  name: 'section-location',
+  components: {
+    AppIcon,
+    ParallaxContainer,
+    ParallaxElement,
+    MapLink
+  },
+  computed: {
+    location() {
+      return this.$store.getters.location
     }
+  },
+  mixins: [scrollObserver],
+  methods: {
+    animateSection() {
+      const { $refs } = this
+      const {
+        map,
+        mapPin,
+        streetNames,
+        fwySigns,
+        hours,
+        hoursTitle,
+        hoursList
+      } = $refs
+
+      const title = new SplitText(this.$refs.title)
+      const address1 = new SplitText(this.$refs.address1).chars
+      const address2 = new SplitText(this.$refs.address2).chars
+      const address = [...address1, ...address2]
+
+      return (
+        new TimelineMax({ paused: true })
+
+          //title
+          .add('title', 0.5)
+          .staggerFromTo(
+            title.chars,
+            2,
+            {
+              x: 15,
+              autoAlpha: 0
+            },
+            {
+              x: 0,
+              autoAlpha: 1,
+              ease: Power3.easeOut
+            },
+            0.025,
+            'title'
+          )
+          .staggerFromTo(
+            address,
+            2,
+            {
+              x: 15,
+              autoAlpha: 0
+            },
+            {
+              x: 0,
+              autoAlpha: 1,
+              ease: Power3.easeOut
+            },
+            0.025,
+            'title'
+          )
+
+          //map
+          .add('map', 0)
+          .staggerFromTo(
+            map.children,
+            10,
+            {
+              drawSVG: '50% 50%',
+              ease: Expo.easeIn
+            },
+            {
+              drawSVG: '100%',
+              ease: Expo.easeOut
+            },
+            0.1,
+            'map'
+          )
+          .staggerFromTo(
+            streetNames.children,
+            1,
+            {
+              autoAlpha: 0,
+              y: -15
+            },
+            {
+              autoAlpha: 1,
+              y: 0,
+              ease: Sine.easeOut
+            },
+            0.3,
+            'map+=1'
+          )
+          .staggerFromTo(
+            fwySigns.children,
+            1,
+            {
+              autoAlpha: 0,
+              scale: 1.5
+            },
+            {
+              autoAlpha: 1,
+              scale: 1,
+              transformOrigin: '50% 50%',
+              ease: Sine.easeOut
+            },
+            0.3,
+            'map+=1.2'
+          )
+          .fromTo(
+            mapPin,
+            0.3,
+            {
+              opacity: 0
+            },
+            {
+              opacity: 1,
+              ease: Sine.easeOut
+            },
+            'map'
+          )
+          .fromTo(
+            mapPin,
+            2.5,
+            {
+              y: -window.innerHeight * 0.25
+            },
+            {
+              x: 287,
+              y: 113,
+              ease: Bounce.easeOut
+            },
+            'map'
+          )
+
+          // Hours
+          .add('hours', 1.25)
+          .fromTo(
+            hours.$el,
+            1,
+            {
+              clipPath: '100% 0 0 0',
+              webkitClipPath: '100% 0 0 0'
+            },
+            {
+              clipPath: '0 0 0 0',
+              webkitClipPath: '0 0 0 0',
+              ease: Power3.easeOut
+            },
+            'hours'
+          )
+          .fromTo(
+            hoursTitle,
+            1,
+            {
+              y: -15,
+              autoAlpha: 0
+            },
+            {
+              y: 0,
+              autoAlpha: 1,
+              ease: Power3.easeOut
+            },
+            'hours+=0.5'
+          )
+          .staggerFromTo(
+            hoursList.children,
+            1,
+            {
+              y: -15,
+              autoAlpha: 0
+            },
+            {
+              y: 0,
+              autoAlpha: 1,
+              ease: Power3.easeOut
+            },
+            0.05,
+            'hours+=0.6'
+          )
+      )
+    }
+  }
 }
 </script>
 
-<style lang='scss' scoped>
-
+<style lang="scss" scoped>
 @import '../styles/vars';
 @import '../styles/mixins';
 
 section.location {
-    position: relative;
-    display: grid;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 90vh;
-    padding-top: vw(180);
-    padding-bottom: 0;
-    padding-left: vw(180);
-    color: $color-offwhite;
-    @include bp(tablet) {
-        min-height: 50vh;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-    }
-    @include bp(mobile) {
-        min-height: 100vh;
-    }
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90vh;
+  padding-top: vw(180);
+  padding-bottom: 0;
+  padding-left: vw(180);
+  @include bp(tablet) {
+    min-height: 50vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  @include bp(mobile) {
+    min-height: 100vh;
+  }
 }
 
 .location-header {
+  position: relative;
+  padding-left: vw(60);
+  color: $color-offwhite;
+  z-index: 1;
+  @include bp(tablet) {
+    padding: 90px 100px 30px;
     position: relative;
-    padding-left: vw(60);
-    z-index: 1;
-    @include bp(tablet) {
-        padding: 90px 100px 30px;
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-    }
-    @include bp(mobile) {
-        padding: 90px 30px 30px;
-    }
+    display: flex;
+    justify-content: space-between;
+  }
+  @include bp(mobile) {
+    padding: 90px 30px 30px;
+  }
 }
 
 .location-header.parallax-element {
-    top: 80%;
-    @include bp(tablet) {
-        top: initial;
-    }
+  top: 80%;
+  @include bp(tablet) {
+    top: initial;
+  }
 }
 
 .location-title {
-    margin-bottom: vw(15);
-    color: $color-midwhite;
+  margin-bottom: vw(15);
+  color: $color-midwhite;
 }
 
 .bg {
-    background: $color-brown;
+  background: $color-brown;
+  @include max-area;
+  bottom: vw(60);
+  z-index: 0;
+  overflow: hidden;
+
+  @include bp(tablet) {
+    bottom: 60px;
+  }
+
+  .bg-pattern {
     @include max-area;
-    bottom: vw(60);
-    z-index: 0;
-    overflow: hidden;
+    background: url('../assets/images/pattern-clouds.gif') 50% 50%/50% auto
+      repeat;
+    mix-blend-mode: color-dodge;
+    opacity: 0.03;
+  }
 
-    @include bp(tablet) {
-        bottom: 60px;
-    }
-    
-    .bg-pattern {
-        @include max-area;
-        background: url('../assets/images/pattern-clouds.gif') 50% 50%/50% auto repeat;
-        mix-blend-mode: color-dodge;
-        opacity: 0.03;
-    }
-
-    .bg-pattern.parallax-element {
-        bottom: -50%;
-    }
+  .bg-pattern.parallax-element {
+    bottom: -50%;
+  }
 }
 
 address {
-    font-style: normal;
-    span {
-        display: block;
-    }
+  font-style: normal;
+  span {
+    display: block;
+  }
 }
 
 .location-link {
-    margin-top: vw(30);
-    @include base-font(small);
+  margin-top: vw(30);
+  @include base-font(small);
 }
 
 @media (hover: hover) {
-    .location-link:hover {
-        color: white;
-    }
+  .location-link:hover {
+    color: white;
+  }
 }
 
 .hours {
-    background: $color-offwhite;
-    padding: vw(30) vw(60);
-    color: $color-brown;
-    margin-top: vw(30);
-    position: relative;
-    z-index: 1;
-    @include bp(tablet) {
-        margin: 0;
-        padding: 60px;
-        margin: 0 100px;
-    }
-    @include bp(mobile) {
-        margin: 0;
-        padding: 30px;
-        margin: 15px;
-    }
+  background: $color-offwhite;
+  padding: vw(30) vw(60);
+  color: currentColor;
+  margin-top: vw(30);
+  position: relative;
+  z-index: 1;
+  @include bp(tablet) {
+    margin: 0;
+    padding: 60px;
+    margin: 0 100px;
+  }
+  @include bp(mobile) {
+    margin: 0;
+    padding: 30px;
+    margin: 15px;
+  }
 }
 
 .app-icon {
-    stroke: $color-brown;
+  stroke: currentColor;
 }
 
 .hours.parallax-element {
-    top: 30%;
-    @include bp(tablet) {
-        top: initial;
-    }
+  top: 30%;
+  @include bp(tablet) {
+    top: initial;
+  }
 }
 
 .hours-list {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .hours-title {
-    margin-bottom: vw(15);
+  margin-bottom: vw(15);
 }
 
 .hours-this-day {
-    display: flex;
-    justify-content: space-between;
-    @include base-font(small);
-    padding: vw(5) 0;
+  display: flex;
+  justify-content: space-between;
+  @include base-font(small);
+  padding: vw(5) 0;
 }
 
 .day {
-    margin-right: vw(120);
-    font-weight: 700;
+  margin-right: vw(120);
+  font-weight: 700;
 }
 
 .map {
-    position: absolute;
-    top: 0;
-    right: 5%;
-    bottom: 0;
-    width: auto;
-    height: calc(100% - #{vw(60)});
-    @include bp(tablet) {
-        height: auto;
-        width: 70%;
-        margin: auto;
-        position: relative;
-        right: 0;
-        left: 0;
-    }
-    @include bp(mobile) {
-        width: 100%;
-    }
+  position: absolute;
+  top: 0;
+  right: 5%;
+  bottom: 0;
+  width: auto;
+  height: calc(100% - #{vw(60)});
+  @include bp(tablet) {
+    height: auto;
+    width: 70%;
+    margin: auto;
+    position: relative;
+    right: 0;
+    left: 0;
+  }
+  @include bp(mobile) {
+    width: 100%;
+  }
 }
 
 .street {
-    opacity: 0.5;
-    fill: none;
-    stroke: $color-offwhite;
-    stroke-width: 2;
-    stroke-linecap: round;
+  opacity: 0.5;
+  fill: none;
+  stroke: $color-offwhite;
+  stroke-width: 2;
+  stroke-linecap: round;
 }
 
 .fwy {
-    fill: none;
-    stroke: darken($color-orange, 30%);
-    stroke-width: 3;
-    stroke-linecap: round;
-} 
-
-.street-name {
-    fill:$color-offwhite;
+  fill: none;
+  stroke: darken($color-orange, 30%);
+  stroke-width: 3;
+  stroke-linecap: round;
 }
 
-.fwy-sign-bg { 
-    fill:$color-midwhite;
+.street-name {
+  fill: $color-offwhite;
+}
+
+.fwy-sign-bg {
+  fill: $color-midwhite;
 }
 
 .fwy-letters {
-    fill:$color-brown;
+  fill: $color-brown;
 }
 
 .fwy-sign-top {
-    fill:$color-gold;
+  fill: $color-gold;
 }
 
 .chop-stick {
-    fill:$color-gold
+  fill: $color-gold;
 }
 
 .bowl {
-    fill:$color-primary;
+  fill: $color-primary;
 }
 
 .bowl-outline {
-    fill:$color-brown;
+  fill: $color-brown;
 }
 
 .letter-z {
-    fill: $color-midwhite;
+  fill: $color-midwhite;
 }
-
 </style>
