@@ -114,8 +114,7 @@
       </ParallaxElement>
       <ParallaxElement :factor="-0.1" ref="aboutAside">
         <figure>
-          <img :src="about.aside" alt="About Us" />
-          {about.aside}
+          <img :src="about.image" alt="About Us" />
         </figure>
       </ParallaxElement>
     </aside>

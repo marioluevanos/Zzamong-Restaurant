@@ -91,7 +91,7 @@ export const getters = {
       content:
         'Zzamong Restaurant was originally established in May of 2009 by Mr. An who moved to Los Angeles from from S. Korea in 2008. Zzamong\'s first signature dish, Jam-Bong, was a hit in Koreatown.\nCustomers couldn\'t get enough and were lining up for his new style of Jam-Bong (aka Spicy Noodle Soup). After 4 years of creating a name for himself, Mr. An met another Mr. An who wanted to keep the same tradition of servinghigh quality Chinese! Having the same ancestral background we had an instant bond, I started to call him "Hyung-nim" (older brother) right away. My business partner, Andy and I took over the restaurant and have grown the menu to over 100 items adding to the legacy of original menu.\nWe have added our own improvements to the Ja-Jang-Myeon but the Jam Pong remains the same great recipe. We are very proud to have added many new dishes to the menu so you can enjoy our signature dishes or be adventurous and try some new ones. You will love the food, the service and the atmosphere!',
       title: 'About Zzamong',
-      aside:
+      image:
         'http://zzamong-restaurant.appspot.com.storage.googleapis.com/about-us.webp'
     },
   press: state =>
