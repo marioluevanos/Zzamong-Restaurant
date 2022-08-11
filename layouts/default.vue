@@ -1,16 +1,16 @@
 <template>
-    <main class='default'>
-        <AppNavigation/>
-        <nuxt class='page'/>
-    </main>
+  <main class="default">
+    <AppNavigation />
+    <nuxt class="page" />
+  </main>
 </template>
 
 <script>
 import AppNavigation from '@/components/AppNavigation.vue'
 export default {
-    name: 'default',
-    components: {
-        AppNavigation
-    }
+  name: 'default',
+  components: {
+    AppNavigation
+  }
 }
 </script>

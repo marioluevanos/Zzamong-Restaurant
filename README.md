@@ -1,6 +1,6 @@
 # zzamong-restaurant
 
-> My funkadelic Nuxt.js project
+> Public facing website.
 
 ## Build Setup
 

@@ -1,9 +1,12 @@
 {
   "name": "zzamong-restaurant",
   "version": "1.0.0",
-  "description": "My funkadelic Nuxt.js project",
+  "description": "Public facing website",
   "author": "Mario Luevanos",
   "private": true,
+  "engines": {
+    "node": "14.15.0"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -19,7 +22,7 @@
   "devDependencies": {
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.14.1",
     "nodemon": "^1.18.9",
     "prettier": "^1.16.4",
     "sass-loader": "^7.1.0"
